@@ -52,8 +52,8 @@ The contact form now posts to `POST /api/contact` and sends inquiries via Resend
 Set these environment variables (see `.env.example`):
 
 - `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL` (recipient inbox, e.g. `info1@spurtek.com.pk`)
-- `CONTACT_FROM_EMAIL` (must be a verified sender/domain in Resend)
+- `CONTACT_TO_EMAIL` (recipient inbox, e.g. `info@verbasense.io`)
+- `CONTACT_FROM_EMAIL` (must be a verified sender/domain in Resend, e.g. `VerbaSense <info@verbasense.io>`)
 
 Without these variables, the API returns a safe error and the UI shows a submit failure message.
 
