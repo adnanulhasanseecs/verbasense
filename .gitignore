@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# local dev server (manage-frontend.ps1)
+.courtsense-dev.pid
+/logs/dev-server.log
+
 # debug
 npm-debug.log*
 yarn-debug.log*

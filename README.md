@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CourtSense — Judicial Intelligence System (CJIS)
 
-## Getting Started
+Enterprise marketing site for **CourtSense Judicial Intelligence System**: Next.js (App Router), TypeScript, Tailwind CSS v4, and shadcn/ui.
 
-First, run the development server:
+## Requirements
+
+- Node.js 20+ (LTS recommended)
+- npm 10+
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Frontend dev server (recommended on Windows)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+From the repo root, use **`manage-frontend.ps1`** so start/stop/restart/status stay consistent (port **3010**, PID file, logs):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```powershell
+.\manage-frontend.ps1 start    # background dev server
+.\manage-frontend.ps1 status
+.\manage-frontend.ps1 stop
+.\manage-frontend.ps1 restart
+```
 
-## Learn More
+- Wrapper PID: `.courtsense-dev.pid` (gitignored)
+- Log output: `logs/dev-server.log`
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command            | Description                                      |
+| ------------------ | ------------------------------------------------ |
+| `.\manage-frontend.ps1 start` | Dev server in background (port 3010) — **prefer this** |
+| `npm run dev`      | Dev server on **http://localhost:3010** (foreground) |
+| `npm run build`    | Production build                                 |
+| `npm run start`    | Production server on **http://localhost:3010** (after `build`) |
+| `npm run lint`     | ESLint                                           |
+| `npm run test`     | Vitest (unit + component tests)                  |
+| `npm run test:watch` | Vitest watch mode                              |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment (Vercel)
 
-## Deploy on Vercel
+1. Import the repository in [Vercel](https://vercel.com).
+2. Framework preset: **Next.js**.
+3. Build command: `npm run build`, output: `.next`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Contact form email delivery
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The contact form now posts to `POST /api/contact` and sends inquiries via Resend.
+
+Set these environment variables (see `.env.example`):
+
+- `RESEND_API_KEY`
+- `CONTACT_TO_EMAIL` (recipient inbox, e.g. `info1@spurtek.com.pk`)
+- `CONTACT_FROM_EMAIL` (must be a verified sender/domain in Resend)
+
+Without these variables, the API returns a safe error and the UI shows a submit failure message.
+
+## Project layout
+
+- `app/` — routes and `layout.tsx`
+- `components/` — `ui/` (shadcn), `layout/`, `cjis/`, `contact/`, `providers/`
+- `sections/` — landing page sections
+- `lib/` — utilities, constants, Zod schemas, tests (`*.test.ts`)
+
+## Design tokens
+
+Primary navy `#0B1F3A`, accent gold `#C89B3C`, background `#F8FAFC`. Light/dark themes via `next-themes` (navbar toggle).
+
+## License
+
+Private / unlicensed — adjust for your organization.

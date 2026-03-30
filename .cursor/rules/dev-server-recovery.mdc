@@ -1,0 +1,19 @@
+---
+description: Automatically recover Next dev server by resetting .next and restarting npm dev
+alwaysApply: true
+---
+
+# Dev Server Recovery Workflow
+
+When runtime/chunk/build-cache issues appear in this project (examples: `a[d] is not a function`, `ChunkLoadError`, stale asset/chunk mismatch, broken HMR), run the following sequence automatically without asking first:
+
+1. Stop any running Next.js dev process for this repo (or free port `3010` if occupied).
+2. Delete the project `.next` directory.
+3. Start a fresh dev server with `npm run dev`.
+4. Confirm server readiness by checking startup logs and a successful HTTP response from `http://localhost:3010/`.
+
+## Notes
+
+- Apply this workflow only when dev/runtime cache/chunk symptoms indicate restart/reset is needed.
+- Do not use `nump`; use `npm run dev`.
+- Keep user informed briefly while executing the steps.

@@ -1,0 +1,48 @@
+---
+description: CourtSense CJIS marketing site — TypeScript, Tailwind, App Router, enterprise tone
+globs: "**/*.{ts,tsx,css}"
+---
+
+# CourtSense website
+
+## Code quality
+
+- Use TypeScript only (no plain JavaScript).
+- Use functional components and hooks only.
+- Keep components modular; avoid large monolithic files.
+
+## Styling
+
+- Use Tailwind utility classes only in components (no inline `style` except unavoidable SVG/radial cases).
+- Follow the CJIS palette in `app/globals.css` (`--primary` navy, `--secondary` gold, background `#F8FAFC`).
+- Prefer an 8px spacing rhythm (`gap-4`, `py-16`, etc.).
+
+## Architecture
+
+- Use the Next.js App Router only (no Pages Router).
+- Prefer Server Components; mark `"use client"` only when hooks, Framer Motion, or browser APIs are required.
+- Keep validation logic in `lib/` (e.g. `contact-schema.ts`).
+
+## Performance
+
+- Use `next/image` for raster assets when added.
+- Avoid unnecessary client boundaries; lazy-load heavy client sections if they grow.
+
+## UI / UX
+
+- Enterprise simplicity: minimal motion; respect `prefers-reduced-motion` (see `FadeInSection`).
+- Provide accessible labels, landmarks, and skip links.
+
+## Naming
+
+- Components: PascalCase. Files: kebab-case or PascalCase for components. Variables: camelCase.
+
+## Security & privacy
+
+- No external analytics or tracking scripts.
+- Do not add dependencies without clear need.
+- No hardcoded secrets; use env templates for future APIs.
+
+## Tone
+
+- Institutional, formal copy. Emphasize efficiency, accuracy, and security—not hype.
