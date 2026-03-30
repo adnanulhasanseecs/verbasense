@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://verbasense.example.gov"),
+  metadataBase: new URL("https://verbasense.io"),
   icons: {
     icon: [
       { url: "/favicon.webp", type: "image/webp", sizes: "32x32" },
@@ -35,11 +35,37 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
+  keywords: [
+    "VerbaSense",
+    "judicial intelligence",
+    "enterprise meeting intelligence",
+    "government meeting intelligence",
+    "AI transcription",
+    "on-premise AI platform",
+  ],
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: "VerbaSense Intelligence Platform",
+    description:
+      "Transform high-stakes conversations into structured, searchable, and actionable intelligence.",
+    url: "https://verbasense.io",
+    siteName: "VerbaSense",
+    images: [
+      {
+        url: "/brand/hero-image-vip.webp",
+        width: 1200,
+        height: 630,
+        alt: "VerbaSense Intelligence Platform",
+      },
+    ],
     type: "website",
     locale: "en",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VerbaSense Intelligence Platform",
+    description:
+      "Transform high-stakes conversations into structured, searchable, and actionable intelligence.",
+    images: ["/brand/hero-image-vip.webp"],
   },
 };
 

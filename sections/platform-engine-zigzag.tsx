@@ -7,13 +7,13 @@ import Image from "next/image";
 
 export function PlatformEngineZigzagSection() {
   return (
-    <Section id="engine-features" surface="muted">
+    <Section id="workflow" surface="muted">
       <FadeInSection>
         <SectionHeader
-          eyebrow="Capabilities"
-          title="Engine in depth"
+          eyebrow="Workflow"
+          title="How intelligence moves from capture to decisions"
           titleId="vip-zigzag-heading"
-          description="How VerbaSense processes critical conversations end to end—from capture through structured outputs."
+          description="End-to-end workflow from multi-modal inputs to governed outputs your teams can review, search, and act on."
           className="max-w-3xl"
         />
         <div className="mt-14 flex flex-col gap-16 md:gap-24">

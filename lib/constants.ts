@@ -17,14 +17,17 @@ export const courtsenseProductName =
   "CourtSense Judicial Intelligence System (CJIS)" as const;
 
 export const heroTitle =
-  "Intelligence for Every Critical Conversation" as const;
+  "Intelligence for High-Stakes Conversations" as const;
 
 export const heroSupportingLine =
-  "Transform meetings into structured, searchable, and actionable intelligence across judicial, enterprise, and government environments." as const;
+  "Transform meetings, proceedings, and documents into structured, searchable, and actionable intelligence." as const;
 
 /** Homepage band below hero artwork—must not duplicate headline/subcopy shown in the hero image. */
 export const homeHeroBandHeadline =
-  "Modular transcription, understanding, and retrieval—deployed on-premise or hybrid and tailored to judicial, enterprise, and government programs." as const;
+  "A unified intelligence platform for institutions where decisions must be accurate, auditable, and operationally defensible." as const;
+
+export const problemStatement =
+  "High-stakes institutions still rely on fragmented notes, delayed summaries, and disconnected records. VerbaSense replaces that gap with one governed system of capture, understanding, and retrieval." as const;
 
 /** Legacy block quote / long-form value prop (About, optional reuse). */
 export const coreValueProposition =
@@ -49,39 +52,39 @@ export type PlatformEngineFeature = {
 export const platformEngineFeatures: readonly PlatformEngineFeature[] = [
   {
     id: "asr",
-    title: "Speech recognition",
+    title: "Accurate, speaker-aware transcripts",
     description:
-      "High-accuracy transcription tuned for formal speech, terminology, and multilingual settings where precision matters.",
+      "Produce reliable transcripts for formal proceedings and meetings, with speaker attribution suitable for review, citation, and record continuity.",
   },
   {
     id: "diarization",
-    title: "Speaker identification",
+    title: "Clear accountability by participant",
     description:
-      "Attribution of speech to participants to support minutes, accountability, and downstream retrieval.",
+      "Track who said what across sessions so minutes, summaries, and decisions retain context and ownership.",
   },
   {
     id: "summarization",
-    title: "Summarization",
+    title: "Faster review with structured summaries",
     description:
-      "Concise narratives of proceedings and meetings aligned to institutional style and review requirements.",
+      "Convert long sessions into concise, institution-ready summaries aligned to courtroom, board, or committee standards.",
   },
   {
     id: "actions",
-    title: "Action extraction",
+    title: "Automatically identify decisions, risks, and action items",
     description:
-      "Structured surfacing of directives, deadlines, owners, and follow-ups from spoken and written record.",
+      "Surface directives, owners, deadlines, and risk signals directly from the record to reduce manual follow-up effort.",
   },
   {
     id: "documents",
-    title: "Document intelligence",
+    title: "Connected document and meeting intelligence",
     description:
-      "Analysis and summarization of briefings, filings, and attachments linked to the conversational record.",
+      "Link filings, briefs, and attachments to spoken context so teams move from discussion to evidence without context loss.",
   },
   {
     id: "storage",
-    title: "Secure storage",
+    title: "Governed retention and controlled access",
     description:
-      "Retention-aware storage and indexing within your security boundary—on-premise, private cloud, or approved hybrid patterns.",
+      "Keep records within your security boundary with policy-based retention, searchable archives, and controlled access.",
   },
 ] as const;
 
@@ -305,10 +308,10 @@ export const useCases = [
 ] as const;
 
 export const securityIntro =
-  "VerbaSense is designed with a security-first posture suitable for government and regulated enterprises:";
+  "VerbaSense provides security and deployment controls for institutions where data custody, traceability, and compliance are mandatory:";
 
 export const securityClosing =
-  "Controls map to common judicial and public-sector expectations for confidentiality, integrity, and accountability.";
+  "Security controls map to judicial, government, and regulated enterprise expectations for confidentiality, integrity, and accountability.";
 
 export const securityPoints = [
   {
@@ -318,7 +321,8 @@ export const securityPoints = [
   },
   {
     title: "End-to-end encryption",
-    description: "Data protected at rest and in transit according to enterprise practice.",
+    description:
+      "AES-256 encryption at rest and TLS-secured communication in transit.",
   },
   {
     title: "Role-based access control",
@@ -333,4 +337,10 @@ export const securityPoints = [
     description:
       "Sensitive audio, transcripts, and documents remain within your defined security and data-classification boundary.",
   },
+] as const;
+
+export const whoItsFor = [
+  "Judicial systems and courts",
+  "Government institutions and ministries",
+  "Enterprise leadership and governance teams",
 ] as const;
