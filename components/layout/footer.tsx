@@ -13,24 +13,26 @@ const footerColumns = [
     ],
   },
   {
-    title: "Company",
+    title: "Security",
     links: [
-      { href: "/about", label: "About" },
-      { href: "/contact", label: "Contact" },
+      { href: "/#security-deployment", label: "Security overview" },
+      { href: "/platform#deployment-options", label: "Deployment options" },
+      { href: "/legal#privacy-policy", label: "Privacy policy" },
     ],
   },
   {
-    title: "Legal",
+    title: "Contact",
     links: [
-      { href: "/legal#privacy-policy", label: "Privacy Policy" },
-      { href: "/legal#terms-of-service", label: "Terms of Service" },
+      { href: "/contact", label: "Contact form" },
+      { href: "mailto:info@verbasense.io", label: "info@verbasense.io" },
+      { href: "/about", label: "About VerbaSense" },
     ],
   },
 ] as const;
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-brand-navy text-white">
+    <footer className="border-t border-white/10 bg-navbar text-white">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">

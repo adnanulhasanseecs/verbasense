@@ -16,7 +16,7 @@ export function LandingCtaSection() {
         />
         <SectionHeader
           eyebrow="Engage"
-          title="Schedule a technical discussion"
+          title="Request Technical Demonstration"
           titleId="cta-heading"
           description="Discuss deployment, security boundaries, and vertical fit for courts, agencies, or enterprise programs."
           className="mx-auto max-w-xl text-center [&_h2]:mx-auto"
@@ -27,6 +27,9 @@ export function LandingCtaSection() {
             Review the platform
           </CtaButton>
         </div>
+        <p className="mt-6 text-sm text-muted-foreground">
+          See how VerbaSense operates in real-world deployments.
+        </p>
       </div>
     </Section>
   );

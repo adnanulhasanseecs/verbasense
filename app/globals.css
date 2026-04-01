@@ -82,7 +82,7 @@
   --text-muted: #94a3b8;
 
   /* —— Application tokens (map to Tailwind semantic colors) —— */
-  --navbar: var(--brand-navy);
+  --navbar: #101926;
   --navbar-foreground: #ffffff;
   --navbar-muted: rgb(255 255 255 / 78%);
 
@@ -144,7 +144,7 @@
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
 
-  --navbar: #020617;
+  --navbar: #101926;
   --navbar-foreground: #e2e8f0;
   --navbar-muted: rgb(226 232 240 / 72%);
 

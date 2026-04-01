@@ -7,13 +7,13 @@ import type { VerticalId } from "@/components/vip/vertical-card";
 
 export function VerticalSolutionsSection() {
   return (
-    <Section id="solutions" surface="muted">
+    <Section id="solutions" surface="muted" className="pt-10 md:pt-14">
       <FadeInSection>
         <SectionHeader
           eyebrow="Solutions"
-          title="Vertical solutions"
+          title="Choose your solution line"
           titleId="vertical-solutions-heading"
-          description="The same engine, configured for the governance, terminology, and retention rules of your institution—CourtSense, EnterpriseSense, or GovSense."
+          description="Use these deployment-ready paths to navigate directly to the solution that matches your operating environment."
           className="max-w-3xl"
         />
         <div className="mt-14 grid gap-6 md:grid-cols-3">

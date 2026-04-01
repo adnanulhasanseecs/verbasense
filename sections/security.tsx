@@ -3,12 +3,7 @@ import { Heading } from "@/components/cjis/heading";
 import { SectionHeader } from "@/components/cjis/section-header";
 import { Section } from "@/components/cjis/section";
 import { TrustBadge } from "@/components/cjis/trust-badge";
-import {
-  securityClosing,
-  securityIntro,
-  securityPoints,
-  whoItsFor,
-} from "@/lib/constants";
+import { securityClosing, securityIntro, securityPoints } from "@/lib/constants";
 
 export function SecuritySection() {
   return (
@@ -23,7 +18,7 @@ export function SecuritySection() {
         <SectionHeader
           className="mt-6"
           eyebrow="Trust & control"
-          title="Security & Deployment"
+          title="Built for Secure and Controlled Environments"
           titleId="security-heading"
           description={securityIntro}
         />
@@ -45,17 +40,19 @@ export function SecuritySection() {
         <p className="mt-10 max-w-3xl text-sm text-muted-foreground">
           {securityClosing}
         </p>
-        <div className="mt-10 rounded-2xl border border-border bg-card p-7">
+        <div className="mt-8 rounded-2xl border border-border bg-card p-7">
           <Heading level={3} className="text-base">
-            Who it&apos;s for
+            Advanced Security (Cloud Deployments)
           </Heading>
-          <ul className="mt-4 grid gap-3 text-sm text-muted-foreground md:grid-cols-3">
-            {whoItsFor.map((item) => (
-              <li key={item} className="rounded-xl bg-muted/50 px-4 py-3">
-                {item}
-              </li>
-            ))}
-          </ul>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Supports identity-based access mechanisms such as workload identity
+            and managed service authentication, eliminating static credentials.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            For non-technical teams, this means fewer hidden access keys, lower
+            risk of accidental exposure, and clear proof of which service
+            touched which record at each step.
+          </p>
         </div>
       </FadeInSection>
     </Section>

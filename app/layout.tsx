@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { siteConfig } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,6 +18,27 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
 });
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "VerbaSense Intelligence Platform",
+  url: "https://verbasense.io",
+  email: "info@verbasense.io",
+  logo: "https://verbasense.io/brand/verbaSense-Logo-transparent.webp",
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "VerbaSense Intelligence Platform",
+  url: "https://verbasense.io",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://verbasense.io/?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://verbasense.io"),
@@ -79,6 +101,16 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${inter.className} min-h-screen flex flex-col antialiased`}
       >
+        <Script
+          id="organization-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <Script
+          id="website-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <a
             href="#main-content"

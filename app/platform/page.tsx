@@ -7,9 +7,11 @@ import {
   architecturePipelineClosing,
   architecturePipelineIntro,
   platformEngineFeatures,
+  verticalSolutions,
 } from "@/lib/constants";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 export const metadata: Metadata = {
   title: "Platform",
   description:
@@ -66,6 +68,36 @@ export default function PlatformPage() {
             features={platformEngineFeatures}
             className="mt-10"
           />
+        </FadeInSection>
+      </Section>
+      <Section surface="muted">
+        <FadeInSection>
+          <Heading level={2}>Solutions on this platform</Heading>
+          <p className="mt-3 max-w-3xl text-muted-foreground">
+            Choose the page that matches your operating context and governance
+            requirements.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {verticalSolutions.map((solution) => (
+              <article
+                key={solution.id}
+                className="rounded-2xl border border-border bg-card p-6 shadow-sm"
+              >
+                <Heading level={3} className="text-lg">
+                  {solution.title}
+                </Heading>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {solution.description}
+                </p>
+                <Link
+                  href={solution.href}
+                  className="mt-5 inline-flex text-sm font-semibold text-primary underline-offset-4 hover:underline"
+                >
+                  View {solution.title}
+                </Link>
+              </article>
+            ))}
+          </div>
         </FadeInSection>
       </Section>
       <Section surface="muted">
@@ -127,6 +159,52 @@ export default function PlatformPage() {
         </FadeInSection>
       </Section>
       <HardwareSection />
+      <Section id="deployment-options" surface="elevated">
+        <FadeInSection>
+          <Heading level={2}>Deployment options</Heading>
+          <p className="mt-3 max-w-3xl text-muted-foreground">
+            Select the model that matches your security posture, IT operations,
+            and performance expectations.
+          </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <Heading level={3} className="text-lg">
+                On-premise / private cloud boundary
+              </Heading>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
+                <li>Data stays within your controlled network and policy boundary.</li>
+                <li>Suitable for courts and regulated environments with strict custody controls.</li>
+                <li>Direct integration with enterprise identity, SIEM, and audit systems.</li>
+              </ul>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Recommended hardware profiles: NVIDIA L40S for balanced throughput,
+                A100 for larger multi-session loads, and H100 for highest-scale,
+                latency-sensitive deployments.
+              </p>
+            </article>
+            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <Heading level={3} className="text-lg">
+                Workload identity cloud option
+              </Heading>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Advanced Security (Cloud Deployments): supports identity-based
+                access mechanisms such as workload identity and managed service
+                authentication, eliminating static credentials.
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
+                <li>Lower credential leakage risk for non-technical teams.</li>
+                <li>Service-to-service access is short-lived and policy-enforced.</li>
+                <li>Clear audit trace of which workload accessed which resource.</li>
+              </ul>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Cloud GPU guidance: L40S for cost-efficient workloads, A100 for
+                production-scale concurrency, and H100 for premium low-latency or
+                heavy model inference requirements.
+              </p>
+            </article>
+          </div>
+        </FadeInSection>
+      </Section>
       <Section surface="muted">
         <FadeInSection>
           <Heading level={2}>Security-first design</Heading>

@@ -25,6 +25,7 @@ export function VerticalCard({
   className,
 }: VerticalCardProps) {
   const src = verticalCardHeroImage[verticalId];
+  const linkLabel = `Explore ${title} solution`;
   return (
     <article
       className={cn(
@@ -52,12 +53,13 @@ export function VerticalCard({
       </p>
       <Link
         href={href}
+        aria-label={linkLabel}
         className={cn(
           buttonVariants({ variant: "outline" }),
           "mt-6 inline-flex w-full justify-center rounded-2xl sm:w-auto",
         )}
       >
-        Learn more
+        {linkLabel}
       </Link>
     </article>
   );

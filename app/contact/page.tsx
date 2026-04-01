@@ -17,6 +17,15 @@ export default function ContactPage() {
         For technical discussions, system demonstrations, or deployment inquiries,
         please reach out to our team.
       </p>
+      <p className="mt-3 text-sm text-muted-foreground">
+        Email:{" "}
+        <a
+          href="mailto:info@verbasense.io"
+          className="font-medium text-primary underline-offset-4 hover:underline"
+        >
+          info@verbasense.io
+        </a>
+      </p>
       <div className="mt-10">
         <ContactForm />
       </div>

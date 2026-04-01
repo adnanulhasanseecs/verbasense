@@ -22,12 +22,24 @@ export const heroTitle =
 export const heroSupportingLine =
   "Transform meetings, proceedings, and documents into structured, searchable, and actionable intelligence." as const;
 
+export const heroAuthorityLine =
+  "Designed for courtrooms, boardrooms, and government environments where accuracy, accountability, and traceability are critical." as const;
+
+export const heroOutcomeLine =
+  "Reduce manual documentation effort, improve accuracy, and ensure complete traceability of decisions." as const;
+
 /** Homepage band below hero artwork—must not duplicate headline/subcopy shown in the hero image. */
 export const homeHeroBandHeadline =
   "A unified intelligence platform for institutions where decisions must be accurate, auditable, and operationally defensible." as const;
 
 export const problemStatement =
   "High-stakes institutions still rely on fragmented notes, delayed summaries, and disconnected records. VerbaSense replaces that gap with one governed system of capture, understanding, and retrieval." as const;
+
+export const problemPoints = [
+  "Critical decisions are not captured accurately",
+  "Accountability is lost across discussions",
+  "Manual documentation introduces delays and errors",
+] as const;
 
 /** Legacy block quote / long-form value prop (About, optional reuse). */
 export const coreValueProposition =
@@ -100,21 +112,21 @@ export const verticalSolutions: readonly VerticalSolution[] = [
     id: "judicial",
     title: "CourtSense",
     description:
-      "Court proceedings, evidence-aligned documentation, and secure records for courts and tribunals.",
+      "Generate accurate, speaker-attributed proceedings with full audit traceability.",
     href: "/platforms/judicial",
   },
   {
     id: "enterprise",
     title: "EnterpriseSense",
     description:
-      "Board and executive sessions with action tracking, decision logging, and defensible archives.",
+      "Track decisions, assign actions, and maintain accountability across meetings.",
     href: "/platforms/enterprise",
   },
   {
     id: "government",
     title: "GovSense",
     description:
-      "Policy discussions, committee work, and compliance-oriented records for agencies and legislatures.",
+      "Enable policy traceability, structured records, and compliance-ready documentation.",
     href: "/platforms/government",
   },
 ] as const;
