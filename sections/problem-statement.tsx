@@ -10,7 +10,7 @@ export function ProblemStatementSection() {
         <Heading level={2} className="relative z-10 max-w-3xl text-balance">
           Where operational risk emerges first
         </Heading>
-        <div className="relative z-10 mt-8 mx-auto w-full max-w-5xl overflow-hidden rounded-2xl ring-1 ring-brand-gold/30 shadow-[0_0_0_1px_rgb(200_155_60_/0.15),0_0_32px_rgb(200_155_60_/0.18)]">
+        <div className="relative z-10 mt-8 mx-auto w-full max-w-5xl overflow-hidden rounded-2xl ring-1 ring-brand-gold/30 shadow-gold-image">
           <Image
             src="/brand/problem-statement-vip.webp"
             alt="Operational risk areas caused by missing structured capture and traceability"

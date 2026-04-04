@@ -47,9 +47,8 @@ export function Footer() {
               <span className="sr-only">{siteConfig.name} — home</span>
             </Link>
             <p className="mt-3 max-w-[19rem] text-sm leading-relaxed text-white/75">
-              VerbaSense VIP transforms critical conversations into structured,
-              searchable intelligence—built for on-premise and hybrid deployment
-              across courts, agencies, and boards.
+              VerbaSense VIP turns critical conversations into structured,
+              searchable intelligence with deployment-ready security controls.
             </p>
           </div>
           {footerColumns.map((col) => (

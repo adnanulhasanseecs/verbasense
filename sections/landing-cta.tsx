@@ -28,7 +28,7 @@ export function LandingCtaSection() {
           </CtaButton>
         </div>
         <p className="mt-6 text-sm text-muted-foreground">
-          See how VerbaSense operates in real-world deployments.
+          Evaluate VerbaSense for your environment.
         </p>
       </div>
     </Section>

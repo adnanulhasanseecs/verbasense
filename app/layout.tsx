@@ -40,6 +40,20 @@ const websiteJsonLd = {
   },
 };
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "VerbaSense Intelligence Platform",
+  brand: {
+    "@type": "Brand",
+    name: "VerbaSense",
+  },
+  description:
+    "Production-grade platform for transcript generation, summarization, action extraction, and traceable decision records across judicial, enterprise, and government environments.",
+  category: "Enterprise AI Platform",
+  url: "https://verbasense.io/platform",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://verbasense.io"),
   icons: {
@@ -111,7 +125,17 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <Script
+          id="product-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <a
             href="#main-content"
             className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"

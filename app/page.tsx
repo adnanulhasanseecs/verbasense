@@ -3,6 +3,9 @@ import { PlatformEngineZigzagSection } from "@/sections/platform-engine-zigzag";
 import { PlatformHeroSection } from "@/sections/platform-hero";
 import { PlatformOverviewSection } from "@/sections/platform-overview";
 import { ProblemStatementSection } from "@/sections/problem-statement";
+import { FlowIntelligenceSection } from "@/sections/flow-intelligence";
+import { RealWorldDeploymentSection } from "@/sections/real-world-deployment";
+import { SampleOutputSection } from "@/sections/sample-output";
 import { SecuritySection } from "@/sections/security";
 import { VerticalSolutionsSection } from "@/sections/vertical-solutions";
 import type { Metadata } from "next";
@@ -18,8 +21,11 @@ export default function HomePage() {
     <>
       <PlatformHeroSection />
       <ProblemStatementSection />
+      <FlowIntelligenceSection />
       <PlatformOverviewSection />
+      <RealWorldDeploymentSection />
       <PlatformEngineZigzagSection />
+      <SampleOutputSection />
       <VerticalSolutionsSection />
       <SecuritySection />
       <LandingCtaSection />

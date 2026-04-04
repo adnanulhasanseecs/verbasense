@@ -1,43 +1,15 @@
 "use client";
 
 import { BrandLogo } from "@/components/cjis/brand-logo";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { brandWordmark, navItems, siteConfig } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Menu, Moon, Sun } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
 import * as React from "react";
-
-function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => setMounted(true), []);
-  const isDark = resolvedTheme === "dark";
-
-  function handleToggleTheme() {
-    const currentlyDark =
-      typeof document !== "undefined" &&
-      document.documentElement.classList.contains("dark");
-    setTheme(currentlyDark ? "light" : "dark");
-  }
-
-  return (
-    <Button
-      type="button"
-      variant="ghost"
-      size="icon"
-      className="size-9 shrink-0 border border-white/25 text-navbar-foreground hover:bg-white/10 hover:text-navbar-foreground"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      onClick={handleToggleTheme}
-      disabled={!mounted}
-    >
-      {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
-    </Button>
-  );
-}
 
 export function Navbar() {
   const pathname = usePathname();
@@ -67,7 +39,7 @@ export function Navbar() {
     );
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-navbar text-navbar-foreground backdrop-blur-md">
+    <header className="sticky top-0 z-[100] border-b border-white/10 bg-navbar text-navbar-foreground backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"

@@ -28,6 +28,9 @@ export const heroAuthorityLine =
 export const heroOutcomeLine =
   "Reduce manual documentation effort, improve accuracy, and ensure complete traceability of decisions." as const;
 
+export const heroTrustLine =
+  "Engineered for accuracy, traceability, and operational accountability." as const;
+
 /** Homepage band below hero artwork—must not duplicate headline/subcopy shown in the hero image. */
 export const homeHeroBandHeadline =
   "A unified intelligence platform for institutions where decisions must be accurate, auditable, and operationally defensible." as const;
@@ -112,24 +115,62 @@ export const verticalSolutions: readonly VerticalSolution[] = [
     id: "judicial",
     title: "CourtSense",
     description:
-      "Generate accurate, speaker-attributed proceedings with full audit traceability.",
+      "Deliver speaker-attributed proceedings with evidentiary traceability and defensible audit history for judicial workflows.",
     href: "/platforms/judicial",
   },
   {
     id: "enterprise",
     title: "EnterpriseSense",
     description:
-      "Track decisions, assign actions, and maintain accountability across meetings.",
+      "Operationalize meeting outcomes by assigning owners, tracking execution, and preserving decision accountability across business units.",
     href: "/platforms/enterprise",
   },
   {
     id: "government",
     title: "GovSense",
     description:
-      "Enable policy traceability, structured records, and compliance-ready documentation.",
+      "Strengthen policy continuity with structured records, decision lineage, and compliance-ready documentation for oversight teams.",
     href: "/platforms/government",
   },
 ] as const;
+
+export const deploymentCapabilityPoints = [
+  {
+    title: "Multi-speaker handling",
+    description:
+      "Separates and labels concurrent speakers so records remain attributable even in overlapping discussion.",
+  },
+  {
+    title: "Long-duration session support",
+    description:
+      "Maintains context and continuity across extended hearings, board meetings, and committee sessions.",
+  },
+  {
+    title: "Noisy environment robustness",
+    description:
+      "Designed to operate under courtroom and public-sector acoustic conditions with variable microphone quality.",
+  },
+  {
+    title: "Structured outputs",
+    description:
+      "Produces transcript, summary, action list, and trace metadata in formats usable by operations and compliance teams.",
+  },
+] as const;
+
+export const sampleOutput = {
+  transcript: [
+    { speaker: "Speaker 1 (Chair)", text: "Please confirm the revised filing timeline." },
+    { speaker: "Speaker 2 (Clerk)", text: "All submissions are now due by Friday, with notice sent to counsel." },
+    { speaker: "Speaker 3 (Registrar)", text: "Action logged. I will publish the updated schedule and docket note today." },
+  ],
+  summary:
+    "The committee confirmed the revised filing timeline and assigned publication of the updated schedule. Notification workflow was approved with same-day execution.",
+  actions: [
+    "Publish updated docket schedule (Owner: Registrar, Due: Today 17:00).",
+    "Send revised submission notice to all parties (Owner: Clerk, Due: Today 16:00).",
+    "Archive transcript and summary in case record (Owner: Records Team, Due: Today).",
+  ],
+} as const;
 
 export type VipZigzagFeature = {
   readonly id: string;

@@ -4,6 +4,7 @@ import {
   heroAuthorityLine,
   heroOutcomeLine,
   heroSupportingLine,
+  heroTrustLine,
   heroTitle,
 } from "@/lib/constants";
 import Image from "next/image";
@@ -36,6 +37,9 @@ export function PlatformHeroSection() {
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/85 sm:text-base">
             {heroAuthorityLine}
+          </p>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-foreground/85 sm:text-base">
+            {heroTrustLine}
           </p>
           <div className="mt-8 h-px w-full max-w-3xl bg-border/70" aria-hidden />
           <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">

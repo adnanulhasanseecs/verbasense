@@ -27,6 +27,10 @@
 # local dev server (manage-frontend.ps1)
 .courtsense-dev.pid
 /logs/dev-server.log
+/logs/dev-boot.log
+
+# local documents (not for repo)
+/workload_identity.docx
 
 # debug
 npm-debug.log*
